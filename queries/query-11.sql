@@ -1,6 +1,6 @@
 /*
-Lista ordenada de aeropuertos y su rango; rango no total de vuelos con origen
-en el aeropuerto; si dos empatan deben tener el mismo rango, y el
+Lista ordenada de aeropuertos y su rango (número total de vuelos con origen
+en el aeropuerto) si dos empatan deben tener el mismo rango, y el
 siguiente número no aparecer
  */
 

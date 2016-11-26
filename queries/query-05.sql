@@ -1,5 +1,6 @@
 /*
-Pares origen-destino (apids) con al menos 2 vuelos, ordenado por no vuelos
+Pares origen-destino (apids) con al menos 2 vuelos, ordenado por numero de
+vuelos
  */
 
 SELECT

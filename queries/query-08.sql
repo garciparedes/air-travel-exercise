@@ -1,6 +1,7 @@
 /*
 Compañía con el máximo número de viajeros
 */
+
 SELECT
     a.nombre,
     COUNT(*) as cuenta
