@@ -1,3 +1,8 @@
+/*
+Personas (cid,nombre) que han viajado en su cumpleaños
+Pista: utilizar extract(<day|month|year> from c.fdn)
+ */
+
 SELECT c.nombre, c.cid
 FROM
     cliente c,

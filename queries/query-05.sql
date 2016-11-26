@@ -1,3 +1,7 @@
+/*
+Pares origen-destino (apids) con al menos 2 vuelos, ordenado por no vuelos
+ */
+
 SELECT
     a1.ciudad as CiudadOrigen,
     a2.ciudad as CiudadDestino,
@@ -22,6 +26,7 @@ FROM (
                   GROUP BY v1.alid, v1.origen, v1.destino
               ) AS res1
          GROUP BY res1.origen, res1.destino
+        HAVING COUNT(*) > 1
      ) AS res2,
     aeropuerto a1,
     aeropuerto a2

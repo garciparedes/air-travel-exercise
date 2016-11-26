@@ -1,3 +1,7 @@
+/*
+Número de vuelos de la compañía ‘Aeropostal’
+ */
+
 SELECT
     a.nombre as Compañia,
     COUNT(*) as NumVuelos

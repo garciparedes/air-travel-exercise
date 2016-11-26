@@ -1,3 +1,7 @@
+/*
+Todos los vuelos realizados por ‘García’
+ */
+
 SELECT
     a1.ciudad as Origen,
     a2.ciudad as Destino,

@@ -1,3 +1,6 @@
+/*
+Compañía (alid) con el máximo número de vuelos
+ */
 SELECT
     a.nombre as Compañia,
     COUNT(*) as NumVuelos
