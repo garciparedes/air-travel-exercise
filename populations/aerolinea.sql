@@ -1,0 +1,10 @@
+INSERT INTO aerolinea (alid, nombre) VALUES (1, 'RyanAir');
+INSERT INTO aerolinea (alid, nombre) VALUES (2, 'Iberia');
+INSERT INTO aerolinea (alid, nombre) VALUES (3, 'Avianca');
+INSERT INTO aerolinea (alid, nombre) VALUES (4, 'AeroPostal');
+INSERT INTO aerolinea (alid, nombre) VALUES (5, 'AirEuropa');
+INSERT INTO aerolinea (alid, nombre) VALUES (6, 'AirFrance');
+INSERT INTO aerolinea (alid, nombre) VALUES (7, 'Servivensa');
+INSERT INTO aerolinea (alid, nombre) VALUES (8, 'Eastern');
+INSERT INTO aerolinea (alid, nombre) VALUES (9, 'Texas Internacional');
+INSERT INTO aerolinea (alid, nombre) VALUES (10, 'Delta');

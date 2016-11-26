@@ -1,0 +1,10 @@
+INSERT INTO aeropuerto (apid, ciudad) VALUES (1, 'Madrid');
+INSERT INTO aeropuerto (apid, ciudad) VALUES (2, 'Barcelona');
+INSERT INTO aeropuerto (apid, ciudad) VALUES (3, 'Valladolid');
+INSERT INTO aeropuerto (apid, ciudad) VALUES (4, 'Dublin');
+INSERT INTO aeropuerto (apid, ciudad) VALUES (5, 'New York');
+INSERT INTO aeropuerto (apid, ciudad) VALUES (6, 'Paris');
+INSERT INTO aeropuerto (apid, ciudad) VALUES (7, 'Tokio');
+INSERT INTO aeropuerto (apid, ciudad) VALUES (8, 'Santiago de Compostela');
+INSERT INTO aeropuerto (apid, ciudad) VALUES (9, 'Berlin');
+INSERT INTO aeropuerto (apid, ciudad) VALUES (10, 'Paredes de Nava');

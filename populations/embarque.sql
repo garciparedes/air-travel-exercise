@@ -1,0 +1,14 @@
+INSERT INTO embarque (cid, vid, fecha) VALUES (1,1, '2016-08-12');
+INSERT INTO embarque (cid, vid, fecha) VALUES (2,3, '2016-08-13');
+INSERT INTO embarque (cid, vid, fecha) VALUES (3,5, '2016-08-14');
+INSERT INTO embarque (cid, vid, fecha) VALUES (4,3, '2016-08-15');
+INSERT INTO embarque (cid, vid, fecha) VALUES (5,5, '2016-08-16');
+INSERT INTO embarque (cid, vid, fecha) VALUES (6,6, '2016-08-17');
+INSERT INTO embarque (cid, vid, fecha) VALUES (7,8, '2016-08-19');
+INSERT INTO embarque (cid, vid, fecha) VALUES (8,9, '2016-08-10');
+INSERT INTO embarque (cid, vid, fecha) VALUES (9,10, '2016-08-21');
+INSERT INTO embarque (cid, vid, fecha) VALUES (10,2, '2016-08-31');
+INSERT INTO embarque (cid, vid, fecha) VALUES (1,2, '2016-09-11');
+INSERT INTO embarque (cid, vid, fecha) VALUES (2,3, '2016-10-11');
+INSERT INTO embarque (cid, vid, fecha) VALUES (3,4, '2016-11-11');
+INSERT INTO embarque (cid, vid, fecha) VALUES (4,6, '2016-12-11');
