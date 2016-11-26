@@ -1,4 +1,4 @@
-SELECT DISTINCT
+SELECT
     a1.ciudad as CiudadOrigen,
     a2.ciudad as CiudadDestino,
     cuenta
