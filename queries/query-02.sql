@@ -1,5 +1,5 @@
 /*
-Número de vuelos de la compañía ‘Aeropostal’
+Número de vuelos de la compañía ‘RyanAir’
  */
 
 SELECT
@@ -9,6 +9,6 @@ FROM
     aerolinea a,
     vuelo v
 WHERE
-    a.nombre = 'Aeropostal' AND
+    a.nombre = 'RyanAir' AND
     a.alid = v.alid
 GROUP BY a.nombre
