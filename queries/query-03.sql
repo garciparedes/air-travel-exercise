@@ -1,6 +1,7 @@
 /*
 Compañía (alid) con el máximo número de vuelos
  */
+
 WITH NVuelos AS (
     SELECT
     v.alid,
@@ -13,10 +14,9 @@ SELECT
     NV.nru
 FROM NVuelos NV,
     aerolinea a
-WHERE 1 > (
-    SELECT COUNT(*)
+WHERE NV.nru >= ALL (
+    SELECT NV2.nru
     FROM NVuelos NV2
-    WHERE NV2.nru > NV.nru
 ) AND a.alid = NV.alid
 ORDER BY NV.nru DESC;
 
