@@ -2,21 +2,11 @@
 Personas (cid,nombre) que no tienen tarjeta de Iberia, pero es en la que más
 han viajado
  */
-SELECT
-    c.cid,
-    c.nombre
-FROM
-    cliente c,
-    aerolinea a
-WHERE
-    a.nombre = 'Iberia' AND
-    c.tarjalid <> a.alid;
-
 
 WITH ClienteAerolinea AS (
     SELECT
-        c.cid    AS cliente,
-        a.alid   AS aerolinea,
+        c.cid,
+        a.alid,
         count(*) AS cuenta
     FROM
         cliente c,
@@ -30,48 +20,24 @@ WITH ClienteAerolinea AS (
     GROUP BY a.alid, c.cid
 )
 SELECT
-    c.nombre,
-    a.nombre,
-    m1.cuenta
+    c.cid,
+    c.nombre
 FROM
     ClienteAerolinea m1,
     (
         SELECT
-            m2.cliente,
+            m2.cid,
             max(cuenta) AS cuenta2
         FROM
             ClienteAerolinea m2
-        GROUP BY m2.cliente
+        GROUP BY m2.cid
     ) AS maxViajes,
     cliente c,
     aerolinea a
 WHERE
     a.nombre = 'Iberia' AND
     c.tarjalid <> a.alid AND
-    a.alid = m1.aerolinea AND
-    c.cid = m1.cliente AND
-    m1.cliente = maxViajes.cliente AND
+    a.alid = m1.alid AND
+    c.cid = m1.cid AND
+    m1.cid = maxViajes.cid AND
     m1.cuenta = maxViajes.cuenta2;
-
-
-WITH MaxComp AS (
-    SELECT
-        c.nombre,
-        a.nombre AS aerolinea,
-        count(*) AS cuenta
-    FROM
-        cliente c,
-        embarque e,
-        vuelo v,
-        aerolinea a
-    WHERE
-        c.cid = e.cid AND
-        e.vid = v.vid AND
-        v.alid = a.alid
-    GROUP BY a.nombre, c.nombre
-)
-SELECT *
-FROM
-    MaxComp m
-ORDER BY m.nombre
-
