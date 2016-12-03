@@ -16,5 +16,7 @@ WHERE
     v.destino = a.apid AND
     '01-01-1990' <= e.fecha AND
     '01-01-2090' >= e.fecha
-GROUP BY p.cid, p.nombre
+GROUP BY
+    p.cid,
+    p.nombre
 ORDER BY cuenta DESC

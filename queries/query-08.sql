@@ -15,7 +15,8 @@ WITH NViajeros AS (
     GROUP BY a.nombre
 )
 SELECT *
-FROM NViajeros NV
+FROM
+    NViajeros NV
 WHERE 1 > (
     SELECT COUNT(*)
     FROM NViajeros NV2
