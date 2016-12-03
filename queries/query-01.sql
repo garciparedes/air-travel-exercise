@@ -3,12 +3,12 @@ Todos los vuelos realizados por ‘García’
  */
 
 SELECT
-    a1.ciudad as Origen,
-    a2.ciudad as Destino,
-    a.nombre as Compañia,
-    e.fecha as Fecha,
-    v.horas as Salida,
-    v.horall as Destino
+    a1.ciudad AS Origen,
+    a2.ciudad AS Destino,
+    a.nombre  AS Compañia,
+    e.fecha   AS Fecha,
+    v.horas   AS Salida,
+    v.horall  AS Destino
 FROM
     embarque e,
     cliente c,

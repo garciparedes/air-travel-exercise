@@ -6,7 +6,7 @@ siguiente número no aparecer
 
 SELECT
     a.ciudad,
-    COUNT(*) as cuenta
+    COUNT(*) AS cuenta
 FROM
     aeropuerto a,
     vuelo v

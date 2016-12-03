@@ -3,13 +3,14 @@
  */
 WITH NVuelos AS (
     SELECT
-        v.alid,
-        COUNT(*) as nru
+    v.alid,
+    COUNT (*) AS nru
     FROM vuelo v
     GROUP BY v.alid
 )
-SELECT a.nombre,
-        NV.nru
+SELECT
+    a.nombre,
+    NV.nru
 FROM NVuelos NV,
     aerolinea a
 WHERE 5 > (
@@ -17,5 +18,5 @@ WHERE 5 > (
     FROM NVuelos NV2
     WHERE NV2.nru > NV.nru
 ) AND a.alid = NV.alid
-ORDER BY NV.nru DESC ;
+ORDER BY NV.nru DESC;
 

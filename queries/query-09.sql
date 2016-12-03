@@ -4,20 +4,20 @@ han viajado
  */
 
 WITH ClienteAerolinea AS (
-    SELECT
-        c.cid,
-        a.alid,
-        count(*) AS cuenta
-    FROM
-        cliente c,
-        embarque e,
-        vuelo v,
-        aerolinea a
-    WHERE
-        c.cid = e.cid AND
-        e.vid = v.vid AND
-        v.alid = a.alid
-    GROUP BY a.alid, c.cid
+SELECT
+C.cid,
+a.alid,
+COUNT (*) AS cuenta
+FROM
+cliente C,
+embarque e,
+vuelo v,
+aerolinea a
+WHERE
+C.cid = e.cid AND
+e.vid = v.vid AND
+v.alid = a.alid
+GROUP BY a.alid, C.cid
 )
 SELECT
     c.cid,

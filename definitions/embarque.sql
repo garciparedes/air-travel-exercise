@@ -1,7 +1,7 @@
 CREATE TABLE Embarque (
     cid INTEGER,
     vid INTEGER,
-    fecha TIMESTAMP,
+    fecha DATE,
 
     PRIMARY KEY (cid, vid, fecha),
 

@@ -3,8 +3,8 @@ Número de vuelos de la compañía ‘RyanAir’
  */
 
 SELECT
-    a.nombre as Compañia,
-    COUNT(*) as NumVuelos
+    a.nombre AS Compañia,
+    COUNT(*) AS NumVuelos
 FROM
     aerolinea a,
     vuelo v

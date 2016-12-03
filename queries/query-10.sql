@@ -4,7 +4,7 @@ Personas que visitaron más ciudades en un periodo (fini,ffin)
 
 SELECT
     p.nombre,
-    COUNT(*) as cuenta
+    COUNT(*) AS cuenta
 FROM
     cliente p,
     embarque e,
