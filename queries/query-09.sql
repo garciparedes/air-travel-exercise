@@ -7,7 +7,7 @@ WITH ClienteAerolinea AS (
     SELECT
         C.cid,
         a.alid,
-        COUNT (*) AS cuenta
+        COUNT(*) AS cuenta
     FROM
         cliente C,
         embarque e,
@@ -26,20 +26,14 @@ SELECT
     c.nombre
 FROM
     ClienteAerolinea m1,
-    (
-        SELECT
-            m2.cid,
-            max(cuenta) AS cuenta2
-        FROM
-            ClienteAerolinea m2
-        GROUP BY m2.cid
-    ) AS maxViajes,
     cliente c,
     aerolinea a
-WHERE
-    a.nombre = 'Iberia' AND
-    c.tarjalid <> a.alid AND
-    a.alid = m1.alid AND
-    c.cid = m1.cid AND
-    m1.cid = maxViajes.cid AND
-    m1.cuenta = maxViajes.cuenta2;
+WHERE m1.cuenta = (
+    SELECT max(cuenta)
+    FROM ClienteAerolinea m2
+    WHERE m1.cid = m2.cid
+) AND
+      a.nombre = 'Iberia' AND
+      c.tarjalid <> a.alid AND
+      a.alid = m1.alid AND
+      c.cid = m1.cid;
