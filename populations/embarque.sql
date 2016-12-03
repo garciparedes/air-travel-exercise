@@ -17,3 +17,4 @@ INSERT INTO embarque (cid, vid, fecha) VALUES (2,2, '2016-10-14');
 INSERT INTO embarque (cid, vid, fecha) VALUES (2,2, '2016-10-15');
 INSERT INTO embarque (cid, vid, fecha) VALUES (3,4, '2016-11-16');
 INSERT INTO embarque (cid, vid, fecha) VALUES (4,6, '2016-12-11');
+INSERT INTO embarque (cid, vid, fecha) VALUES (4,6, '2015-12-11');
