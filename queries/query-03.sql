@@ -14,9 +14,12 @@ SELECT
     NV.nru
 FROM NVuelos NV,
     aerolinea a
-WHERE NV.nru >= ALL (
-    SELECT NV2.nru
-    FROM NVuelos NV2
-) AND a.alid = NV.alid
+WHERE
+    1 > (
+        SELECT COUNT(*)
+        FROM NVuelos NV2
+        WHERE NV2.nru > NV.nru
+    ) AND
+    a.alid = NV.alid
 ORDER BY NV.nru DESC;
 
